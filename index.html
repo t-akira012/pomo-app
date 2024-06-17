@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <script type="module" src="/src/main.ts" defer></script>
+    <style>
+        #frame {
+          width: 100vw;
+          height: 90vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #urlForm {
+          text-align: center;
+        }
+        #urlForm input {
+          width: 300px;
+        }
+  </style>  </head>
+
+  <body>
+    <div id="frame">
+      <form id="urlForm">
+        <label for="urlInput"></label>
+        <input type="text" id="urlInput" name="url" required>
+        <button type="submit">表示</button>
+      </form>
+    </div>
+
+    <script>
+      document.getElementById('urlForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var url = document.getElementById('urlInput').value;
+
+        // frame要素を取得して削除
+        var frame = document.getElementById('frame');
+        frame.remove();
+
+        // 新しいiframe要素を作成して設定
+        var iframe = document.createElement('iframe');
+        iframe.id = 'urlFrame';
+        iframe.style.width = '100vw';
+        iframe.style.height = '100vh';
+        iframe.style.border = 'none';
+        iframe.src = url;
+
+        // フォームの後にiframeを追加
+        document.body.appendChild(iframe);
+
+        // フォームを非表示にする
+        document.getElementById('urlForm').style.display = 'none';
+      });
+    </script>
+</html>
