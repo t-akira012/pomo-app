@@ -31,7 +31,7 @@
       {
         "title": "pomo-app",
         "width": 160,
-        "height": 80,
+        "height": 48,
         "transparent": true,
         "resizable": true,
         "alwaysOnTop": true,
