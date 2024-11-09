@@ -30,8 +30,8 @@
     "windows": [
       {
         "title": "pomo-app",
-        "width": 400,
-        "height": 300,
+        "width": 160,
+        "height": 80,
         "transparent": true,
         "resizable": true,
         "alwaysOnTop": true,
