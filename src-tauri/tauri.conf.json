@@ -16,6 +16,15 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "maximize": true,
+        "minimize": true,
+        "hide": true,
+        "startDragging": true,
+        "show": true,
+        "unmaximize": true,
+        "unminimize": true
       }
     },
     "windows": [
@@ -23,9 +32,11 @@
         "title": "pomo-app",
         "width": 400,
         "height": 300,
+        "transparent": true,
         "resizable": true,
         "alwaysOnTop": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "decorations": false
       }
     ],
     "security": {

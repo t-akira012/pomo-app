@@ -7,6 +7,10 @@
     <title>App</title>
     <script type="module" src="/src/main.ts" defer></script>
     <style>
+        nav {
+          position: absolute;
+          z-index: 999;
+        }
         #frame {
           width: 100vw;
           height: 90vh;
@@ -23,7 +27,8 @@
   </style>  </head>
 
   <body>
-    <div id="frame">
+    <nav data-tauri-drag-region>★</nav>
+    <div id="frame" data-tauri-drag-region="default">
       <form id="urlForm">
         <label for="urlInput"></label>
         <input type="text" id="urlInput" name="url" required>
@@ -55,4 +60,5 @@
         document.getElementById('urlForm').style.display = 'none';
       });
     </script>
+  </body>
 </html>

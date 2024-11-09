@@ -1,3 +1,16 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px; /* ウィンドウ全体の角丸設定 */
+  overflow: hidden; /* 角からコンテンツがはみ出さないように設定 */
+  -webkit-app-region: drag; /* ウィンドウ全体をドラッグ可能にする */
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
 .logo.vite:hover {
   filter: drop-shadow(0 0 2em #747bff);
 }
